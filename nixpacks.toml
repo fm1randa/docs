@@ -1,5 +1,5 @@
 [phases.setup]
-nixPkgs = ["python310", "nodejs_24", "git", "gnumake"]
+nixPkgs = ["python310", "nodejs_22", "git", "gnumake"]
 
 [phases.install]
 cmds = [
