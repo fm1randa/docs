@@ -1,6 +1,6 @@
 [phases.setup]
-nixPkgs = ["git", "gnumake"]
 providers = ['node', 'python']
+nixPkgs = ['...', "git", "gnumake"]
 
 [phases.install]
 cmds = [
