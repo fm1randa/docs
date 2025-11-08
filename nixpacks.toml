@@ -1,0 +1,18 @@
+[phases.setup]
+nixPkgs = ["python310", "nodejs", "git", "gnumake"]
+
+[phases.install]
+cmds = [
+    "pip install -r requirements.txt",
+    "npm install",
+    "npm run build"
+]
+
+[phases.build]
+cmds = [
+    "make SYNC_SDK=true mindocs"
+]
+
+[start]
+cmd = "python -m http.server --directory build/$(ls build | head -n1)/$(ls build/$(ls build | head -n1) | head -n1)/html 8000"
+
